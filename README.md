@@ -1,6 +1,8 @@
 ## RDF Explorer
 
-RDF explorer is a Linked Data Frontend for SPARQL Endpoints
+RDF explorer is a Linked Data Frontend for SPARQL Endpoints.
+
+This fork specializes rdf_explorer for the Conversion Factors KG.
 
 
 ### How to build 

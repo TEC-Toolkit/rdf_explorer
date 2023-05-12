@@ -1,49 +1,18 @@
 {
   "server": {
   	"port": 7070,
-  	"url": "https://rdfexplorer.mint.isi.edu"
+  	"url": "http://localhost:7070"
   },
   "endpoints": {
     "enabled": [
-      "okn-mint",
-      "domain",
-      "mint",
-      "export",
-      "wings",
-      "wikidata"
+      "domain"
     ],
     "domain": {
-      "endpointQuery": "https://endpoint.mint.isi.edu/provenance/query",
+      "endpointQuery": "https://sparql.cf.linkeddata.es/cf",
       "base": "https://w3id.org",
-      "path": "/wings/export/",
-      "graph": true
-    },
-    "okn-mint": {
-      "endpointQuery": "https://endpoint.mint.isi.edu/modelCatalog-1.5.0/query",
-      "base": "https://w3id.org",
-      "path": "/okn/i/mint",
-      "graph": true
-    },
-    "mint": {
-      "endpointQuery": "https://endpoint.mint.isi.edu/ds/query",
-      "base": "https://w3id.org",
-      "path": "/mint/instance"
-    },
-    "export": {
-      "endpointQuery": "https://endpoint.mint.isi.edu/provenance/query",
-      "base": "https://www.opmw.org",
-      "path": "/export/",
-      "graph": true
-    },
-    "wings": {
-      "endpointQuery": "https://endpoint.mint.isi.edu/provenance/query",
-      "base": "https://w3id.org",
-      "path": "wings"
-    },
-    "wikidata": {
-      "endpointQuery": "https://dsbox02.isi.edu:8899/bigdata/namespace/wdq/sparql",
-      "base": "https://w3id.org",
-      "path": "/satellite"
+      "path": "/ecfkg/i/",
+	  "graph":false
+      
     }
   }
 }

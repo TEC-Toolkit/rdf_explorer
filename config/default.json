@@ -1,6 +1,6 @@
 {
   "sparql": {
-    "endpointQuery": "https://endpoint.mint.isi.edu/ds/query",
-    "endpointDescribe": "https://endpoint.mint.isi.edu/ds/sparql"
+    "endpointQuery": "https://sparql.cf.linkeddata.es/cf",
+    "endpointDescribe": "https://sparql.cf.linkeddata.es/cf"
   }
 }

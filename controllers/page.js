@@ -15,13 +15,16 @@ exports.page_show = function(req, res) {
         baseKey = 'endpoints.' + namespace + '.base'
         queryEndpoint = config.get(endPointKey)
         baseURI = config.get(baseKey)
+		
+		
         var graph;
-        if (config.has(graphKey)){ 
+		graph = config.get(graphKey)
+        /*if (config.has(graphKey)){ 
             graph = true;
         }
         else {
             graph = false;
-        }
+        }*/
         console.log(graph); 
         serverKey  = 'server.url'
         serverURL = config.get(serverKey)

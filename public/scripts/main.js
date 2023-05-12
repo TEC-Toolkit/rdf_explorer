@@ -76,8 +76,8 @@ SELECT ?packagename (count(?packagename) as ?count) WHERE {
 } group by (?packagename) order by desc(?count) limit 20`,
   ];
 
-  var baseURL = "https://endpoint.mint.isi.edu";
-  var endpointSPARQL = baseURL + '/ds/sparql';
+  var baseURL = "https://sparql.cf.linkeddata.es/";
+  var endpointSPARQL = baseURL + '/cf';
   var absUrlArray = location.absUrl().split('/');
   scope.loc = absUrlArray[absUrlArray.length -1].split('?')[0].split('#')[0];
   if (scope.loc == 'query') {
@@ -95,6 +95,7 @@ SELECT ?packagename (count(?packagename) as ?count) WHERE {
     YASQE.defaults.createShareLink = null;
     YASQE.defaults.sparql.showQueryButton = true;
     YASQE.defaults.sparql.endpoint = endpointSPARQL;
+	
     for (var n in scope.examples) {
       yasqeTMP = YASQE(document.getElementById("yasqe"+n), {});
       yasqeTMP.setValue(scope.examples[n]);
@@ -104,5 +105,6 @@ SELECT ?packagename (count(?packagename) as ?count) WHERE {
       };
       scope.yasqe.push(yasqeTMP);
     }
+	
   }
 }]);

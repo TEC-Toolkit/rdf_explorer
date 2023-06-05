@@ -8,22 +8,18 @@ This fork specializes rdf_explorer for the Conversion Factors KG.
 ### How to build 
 
 ```shell
-$ docker-compose build
+$ docker build -t <name_of_your_image> .
 ```
 
 ### How to run 
 
-Using docker-compose:
+Using Docker: 
 
 ```shell
-$ docker-compose up -d
+docker run -d --name rdf_explorer -e "NODE_ENV=dev" -p 7070:7070 <name_of_your_image>
 ```
 
-Or you can only docker cmd: 
-
-```shell
-docker run -d --name rdf_explorer -e "NODE_ENV=production" -p 7070:7070 kcapd/explorer
-```
+Where `<name_of_your_image>` is the name of the image you used above.
 
 ### Add new endpoint
 
